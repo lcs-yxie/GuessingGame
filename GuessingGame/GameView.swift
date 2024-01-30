@@ -99,6 +99,15 @@ struct GameView: View {
         // When should then guess lower?
         // FILL IN THIS CODE
         
+        if selectedNumber > target {
+            feedback = "Less"
+        } else if target > selectedNumber{
+            feedback = "More"
+        }
+        else{
+            feedback = "Correct! You guessed the number!"
+        }
+        
         // Save the user's guesses
         guessesMade.append(selectedNumber)
         
